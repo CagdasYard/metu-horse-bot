@@ -27,11 +27,6 @@ def echo_message(message):
     # print(message)
 
 
-@bot.message_handler(func=lambda message: message['chat']['type'] == 'private', content_types=['text'])
-def private_message(message):
-    bot.reply_to(message, "private " + message.text)
-
-
 @app.route('/' + TOKEN, methods=['POST'])
 def getMessage():
     json_string = request.get_data().decode('utf-8')
