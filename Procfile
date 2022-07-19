@@ -1,0 +1,1 @@
+web: gunicorn metuhorsebot:app --log-file -
