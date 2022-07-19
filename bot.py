@@ -32,7 +32,7 @@ def getMessage():
 @app.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://metu-horse-bot.com/' + TOKEN)
+    bot.set_webhook(url='https://metu-horse-bot.herokuapp.com/' + TOKEN)
     return "!", 200
 
 
