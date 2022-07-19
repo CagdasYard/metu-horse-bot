@@ -10,13 +10,13 @@ bot = telebot.TeleBot(TOKEN)
 
 
 @bot.message_handler(func=lambda message: message.chat.type == 'private', content_types=['text'])
-def echo_message(message):
+def echo_message_private(message):
     bot.reply_to(message, 'private ' + message.text)
-    # print(message.chat.type == 'private')
+    print(message.chat.type == 'private')
 
 
 @bot.message_handler(func=lambda message: message.chat.type in ['group', 'supergroup'], content_types=['text'])
-def echo_message(message):
+def echo_message_group(message):
     bot.reply_to(message, message.chat.type + ' ' + message.text)
     # print(message)
 
