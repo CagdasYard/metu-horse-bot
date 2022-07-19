@@ -12,7 +12,7 @@ bot = telebot.TeleBot(TOKEN)
 @app.route('/')
 @app.route('/home')
 def home():
-    return "Success v48"
+    return "Success v32"
 
 
 @bot.message_handler(func=lambda message: message.chat.type == 'private', content_types=['text'])
