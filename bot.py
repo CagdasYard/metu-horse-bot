@@ -12,7 +12,7 @@ bot = telebot.TeleBot(TOKEN)
 @app.route('/')
 @app.route('/home')
 def home():
-    return "Success v32"
+    return "Success v31" + os.environ["METU_HORSE_BOT_API_TOKEN"]
 
 
 @bot.message_handler(func=lambda message: message.chat.type == 'private', content_types=['text'])
